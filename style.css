@@ -1,0 +1,41 @@
+body {
+  background: green;
+}
+.site-name {
+  background-color: white;
+  height: 60px;
+  text-align: center;
+  color: green;
+  font-size: xx-large;
+}
+.color-name-container {
+  background-color: white;
+  height: 60px;
+  text-align: center;
+  color: green;
+  font-size: xx-large;
+}
+.col-4 {
+  text-align: center;
+}
+.switch-color-btn-all {
+  margin: 0 auto;
+  display: block;
+}
+.btn-add,
+.btn-remove {
+  margin: 0 auto 0 auto;
+  display: block;
+}
+/* .namer {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.namer:hover {
+  transform: scale(1.2);
+} */
+.container {
+}
+/* .pcr-button {
+  color: green;
+} */

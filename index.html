@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Palette Generator</title>
+
+    <!-- Color Picker Nano Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Local CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--Script-->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="site-name container border-top-0 border-light border border-5 rounded-bottom">
+        <span class="namer">Random Palette Generator</span>
+    </div>
+
+    <br />
+
+    <button class="button switch-color-btn-all">
+        Switch All
+    </button>
+
+    <br />
+
+    <div class="container">
+        <button class="button btn-primary btn-add">Add</button>
+        <button class="button btn-secondary btn-remove">Remove</button>
+        <br />
+        <div class="row area-Parent">
+
+            <div class="col-4 col-first">
+
+                <button class="button switch-color-btn-first">
+                    First
+                </button>
+
+                <div class="color-name-container color-name-container-first container border rounded">
+                    <span class="color-name-first">
+                    </span>
+                </div>
+
+                <!-- <div class="color-picker color-picker-first"></div> -->
+
+            </div>
+
+            <div class="col-4 col-second">
+
+                <button class="button switch-color-btn-second">
+                    Second
+                </button>
+
+                <div class="color-name-container color-name-container-second container border rounded">
+                    <span class="color-name-second">
+                    </span>
+                </div>
+
+                <!-- <div class="color-picker color-picker-second"></div> -->
+
+            </div>
+
+            <div class="col-4 col-third">
+
+                <button class="button switch-color-btn-third">
+                    Third
+                </button>
+
+                <div class="color-name-container color-name-container-third container border rounded">
+                    <span class="color-name-third">
+                    </span>
+                </div>
+
+                <!-- <div class="color-picker color-picker-third"></div> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Color Picker Script -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script> -->
+
+    <!-- <script>
+        // Simple example, see optional options for more configuration.
+        const pickr = Pickr.create({
+            el: '.color-picker',
+            theme: 'nano',
+            appClass: 'custom-class',
+            defaultRepresentation: 'HEX',
+            components: {
+
+                // Main components
+                preview: true,
+                opacity: false,
+                hue: true,
+
+                // Input / output Options
+                interaction: {
+                    hex: true,
+                    rgba: false,
+                    hsla: false,
+                    hsva: false,
+                    cmyk: false,
+                    input: true,
+                    clear: true,
+                    save: true
+                }
+            }
+        });
+
+        const pickrFirst = pickr;
+        const pickrSecond = pickr;
+        const pickrThird = pickr;
+
+
+        pickrFirst.on('change', (color, source, instance) => {
+
+            let hex = color.toHEXA().toString();
+
+            const colFirst = document.querySelector('.col-first');
+            colFirst.style.backgroundColor = hex;
+
+            const clrNameFirst = document.querySelector('.color-name-first');
+            clrNameFirst.textContent = `${hex}`;
+
+            //console.log(instance._eventListener)
+            //console.log('Event: "change"', color, source, instance);
+        });
+
+        pickrSecond.on('change', (color, source, instance) => {
+
+            let hex = color.toHEXA().toString();
+
+            const colFirst = document.querySelector('.col-first');
+            colFirst.style.backgroundColor = hex;
+
+            const clrNameFirst = document.querySelector('.color-name-first');
+            clrNameFirst.textContent = `${hex}`;
+
+            //console.log(instance._eventListener)
+            //console.log('Event: "change"', color, source, instance);
+        });
+
+        pickrThird.on('change', (color, source, instance) => {
+
+            let hex = color.toHEXA().toString();
+
+            const colFirst = document.querySelector('.col-first');
+            colFirst.style.backgroundColor = hex;
+
+            const clrNameFirst = document.querySelector('.color-name-first');
+            clrNameFirst.textContent = `${hex}`;
+
+            //console.log(instance._eventListener)
+            //console.log('Event: "change"', color, source, instance);
+        });
+
+    </script> -->
+
+
+</body>
+
+</html>
