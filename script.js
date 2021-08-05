@@ -14,9 +14,11 @@ const colThird = document.querySelector('.col-third');
 
 const addBtn = $('.btn-add');
 const removeBtn = $('.btn-remove');
-const maxArea = 7;
+const maxArea = 6;
 const minArea = 2;
 const areaParent = $('.area-Parent');
+
+const totalWidth = 12;
 
 switchClrAll.addEventListener('click', createRandomColorAll);
 switchClrBtnFirst.addEventListener('click', createRandomColorFirst);
@@ -68,7 +70,36 @@ function createRandomColorAll() {
 }
 
 function addArea() {
-    console.log(areaParent[0].children);
+
+    let currentChildCount = areaParent[0].childElementCount;
+    let newCol = totalWidth / (currentChildCount + 1);
+
+    let childNodes = areaParent[0].children;
+
+    let newElCode = `<div class="col-${newCol} col-second">
+
+<button class="button switch-color-btn-second">
+    Second
+</button>
+
+<div class="color-name-container color-name-container-second container border rounded">
+    <span class="color-name-second">
+    </span>
+</div>
+
+</div>`
+
+    areaParent[0].insertAdjacentHTML('beforeend', newElCode);
+
+    Object.entries(childNodes).forEach(el => {
+        const [key, value] = el;
+
+
+    })
+
+
+    //console.log(typeof (areaParent[0]));
+    //if (areaParent[0].children)
 }
 function removeArea() {
 
